@@ -1,3 +1,93 @@
-<html>
-  <body> Buongiono, qua prima o poi apparira qualcosa </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Somma di due numeri</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #121212;
+            color: #fff;
+        }
+
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #4caf50;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #43a047;
+        }
+
+        #risultato {
+            background: #2a2a2a;
+            color: #4caf50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Somma di due numeri</h1>
+
+        <input type="number" id="num1" placeholder="Primo numero">
+        <input type="number" id="num2" placeholder="Secondo numero">
+
+        <button onclick="somma()">Calcola</button>
+
+        <input type="text" id="risultato" placeholder="Risultato" readonly>
+    </div>
+
+    <script>
+        function somma() {
+            const a = Number(document.getElementById("num1").value);
+            const b = Number(document.getElementById("num2").value);
+
+            const risultato = a + b;
+
+            document.getElementById("risultato").value = risultato;
+        }
+    </script>
+
+</body>
 </html>
